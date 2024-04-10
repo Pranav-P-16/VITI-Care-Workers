@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 import '../helper/student.dart';
 import '../helper/worker.dart';
@@ -13,6 +14,15 @@ class APIs {
   static FirebaseFirestore firestore= FirebaseFirestore.instance;
 
   static User get user => auth.currentUser!;
+
+  String? mtoken = " ";
+
+  void getToken() async {
+    await FirebaseMessaging.instance.getToken().then((token) {
+        mtoken = token;
+    });
+  }
+
 
   static Future<bool> userExists() async {
     return (await firestore.collection('workers')
@@ -45,9 +55,13 @@ class APIs {
   //   });
   //
   // }
-  static Future<void> updateTokenStatus(Student student) async{
-    firestore.collection('users').
-    doc(student.id).update({'isRaised' : false,});
+  static Future<void> updateTokenStatus(String id) async{
+    log(id);
+    await firestore.collection('users').
+    doc(id).update({'isRaised' : false,});
+    // firestore.collection('tokens').
+    // doc(id).collection('active').doc().update({'isdone' : true,});
+    log("HJGJGHJGHJVHJVHJVJGKHJ");
   }
   static Stream <QuerySnapshot<Map<String, dynamic>>> getTokenStatus() {
     return firestore.collection('tokens/'+user.uid+'/active/').orderBy('isdone',descending: false).limit(1).snapshots();

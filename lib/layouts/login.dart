@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:viticareworkers/layouts/detailscollect.dart';
 import 'package:viticareworkers/layouts/getdetailspage.dart';
 import '../api/apis.dart';
 import '../helpers/dialogues.dart';
@@ -71,7 +72,7 @@ class _NewLoginPageState extends State<NewLoginPage> {
                     child: ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(backgroundColor: Colors.white,fixedSize: Size(300, 50),),
                         onPressed: (){
-                          _handleGoogleBtnClick();
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> RegScreen()));
                         }, icon: Image.asset('assets/images/google.png',height: 30,),
                         label: RichText(
                           text: TextSpan(

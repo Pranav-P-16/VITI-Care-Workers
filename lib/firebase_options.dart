@@ -50,21 +50,23 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCElMEpYO1m1J7If8b3KbhWc6hYAmbCH1U',
-    appId: '1:965567493761:android:bd1eae9f5c2d553d5abf80',
-    messagingSenderId: '965567493761',
-    projectId: 'swiggy-6de6a',
-    storageBucket: 'swiggy-6de6a.appspot.com',
+    apiKey: 'AIzaSyCUFF4tznYyA2hokyXMldhB-JTsCvoyhUg',
+    appId: '1:332837336527:android:31b8fba2757dacd4b68eba',
+    messagingSenderId: '332837336527',
+    projectId: 'viti-care-dc277',
+    databaseURL: 'https://viti-care-dc277-default-rtdb.firebaseio.com',
+    storageBucket: 'viti-care-dc277.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDrazrTLTxugaAwC64FWEPFPkLPFUPRnV0',
-    appId: '1:965567493761:ios:03d7dd2f9a26187b5abf80',
-    messagingSenderId: '965567493761',
-    projectId: 'swiggy-6de6a',
-    storageBucket: 'swiggy-6de6a.appspot.com',
-    androidClientId: '965567493761-dtdivrkoha46j18cuaobuo0a6q55d5n8.apps.googleusercontent.com',
-    iosClientId: '965567493761-57qfhoa9p8cjmna3ufhuvu6he8kf6nql.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCohfE1Mk6-CpkpyCuVGsHR_NB-lvVll2c',
+    appId: '1:332837336527:ios:9b9aa502bcfe0a64b68eba',
+    messagingSenderId: '332837336527',
+    projectId: 'viti-care-dc277',
+    databaseURL: 'https://viti-care-dc277-default-rtdb.firebaseio.com',
+    storageBucket: 'viti-care-dc277.appspot.com',
+    androidClientId: '332837336527-69173dfgl6d4dk46svq1bs9mjttq9i1g.apps.googleusercontent.com',
+    iosClientId: '332837336527-nn1c7si193l9a6roo00rbcsjjou8heg5.apps.googleusercontent.com',
     iosBundleId: 'com.error404.viticcareworkers.viticareworkers',
   );
 }
